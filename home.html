@@ -136,9 +136,9 @@
     </style>
 </head>
 
-<body class="bg-slate-50 mb-5">
-    <header class="flex justify-between px-20 py-5 bg-white">
-        <div class="flex items-center px-4">
+<body class="bg-slate-50 mb-5 mx-auto px-1">
+    <header class="flex flex-wrap justify-between px-5 py-5 bg-white mx-auto">
+        <div class="flex flex-wrap items-center px-4">
             <img src="./assets/github-logo.png" alt="logo" width=36>
             <p class="m-1 font-semibold text-2xl">GitHub Issues Tracker</p>
         </div>
@@ -146,30 +146,30 @@
         <div class=" flex items-center">
             <label class="input">
 
-                <input type="search" required placeholder="Search issues..." class="w-72 h-11 rounded-md "
+                <input type="search" required placeholder="Search issues..." class="w-full h-11 rounded-md "
                     id="input-search" />
             </label>
             <button id="btn-search" class="btn ml-4 bg-blue-700 text-slate-100 w-32 h-11 rounded-md">Search</button>
         </div>
     </header>
 
-    <nav class="bg-white mt-14 max-w-6xl max-h-20 py-6 pl-6 mx-auto rounded-md">
-        <button id="all" class="btn bg-blue-700 text-slate-100 w-30 h-10 rounded-md mr-2 ">All</button>
-        <button id="open" class="btn bg-slate-50 text-slate-700 w-30 h-10 rounded-md mr-2">Open</button>
-        <button id="close" class="btn bg-slate-50 text-slate-700 w-30 h-10 rounded-md">Close</button>
+    <nav class="bg-white mt-14 max-w-6xl  py-6 pl-6 mx-auto rounded-md">
+        <button id="all" class="btn bg-blue-700 text-slate-100  rounded-md mr-2 w-3/12">All</button>
+        <button id="open" class="btn bg-slate-50 text-slate-700 rounded-md mr-2 w-3/12">Open</button>
+        <button id="close" class="btn bg-slate-50 text-slate-700 rounded-md my-2 w-3/12">Close</button>
     </nav>
     <main>
         <section class="bg-white mt-4 max-w-6xl p-6 mx-auto rounded-md max-h-24 flex justify-between">
-            <div class="flex">
-                <div class="w-12 h-12 bg-[#ECE4FF] p-2 rounded-full">
-                    <img src="./assets/Aperture.png" width="32">
+            <div class="flex justify-center items-center">
+                <div>
+                    <img src="./assets/Aperture.png" width="70" class="bg-[#ECE4FF] p-1 rounded-full">
                 </div>
                 <div class="ml-2">
-                    <p class="font-semibold"><span id="counter"></span> Issues</p>
-                    <p class="text-slate-500">Track and manage your project issues</p>
+                    <p class="font-semibold text-xl"><span id="counter"></span> Issues</p>
+                    <p class="text-slate-500 ">Track and manage your project issues</p>
                 </div>
             </div>
-            <div class="flex ">
+            <div class="flex flex-wrap gap-4 items-center justify-center">
                 <div class="flex items-center mr-3">
                     <img src="./assets/Open-Status.png" alt="">
                     <p>Open</p>
@@ -181,7 +181,7 @@
             </div>
         </section>
         <section id="issues-container"
-            class="bg-[#FBFBFB] max-w-6xl mx-auto border-t-2 border-[#E4E4E7] p-6 flex gap-4 flex-wrap justify-center">
+            class="bg-[#FBFBFB] max-w-6xl mx-auto border-t-2 border-[#E4E4E7] flex gap-4 flex-wrap justify-center">
 
 
         </section>
@@ -190,11 +190,7 @@
         <dialog id="my_modal_1" class="modal">
 
         </dialog>
-        <p onclick="my_modal_1.showModal()">click</p>
-
-        <div class="modal-box w-11/12 max-w-5xl">
-            
-        </div>
+        
     </main>
 
     <script src="./js/script.js"></script>
